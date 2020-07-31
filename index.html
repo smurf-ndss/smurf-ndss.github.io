@@ -30,7 +30,7 @@
         <div class="col">
           <div class="section">
     <h2>SMURF Monitor Unveils Roadblocking Features</h2>
-    <p>Here, you find the source code to the NDSS 2021 submission <it>Who's Hosting the Block Party? Studying Third-Party Blockage of CSP and SRI</it>.</p>
+    <p>Here, you find the source code to the NDSS 2021 submission <i>Who's Hosting the Block Party? Studying Third-Party Blockage of CSP and SRI</i>.</p>
 </div>
 <div class="section">
     <h3>Installation</h3>
@@ -52,7 +52,7 @@ Note that depending on your operating system, you may have to modify <tt>config.
         To run the toolchain, you can simply invoke <tt>smurf.js</tt> and pass the URL you want to check. 
 <pre>node smurf.js --url https://realtor.com</pre>
 
-This will visit <tt>https://realtor.com</tt> and generate a simplified inclusion tree of the main frame. It will print those chains which exhibit more than two parties according the the eTLD+1. Additionally supplying the ```--showCspResults``` as a command line parameter will provide the results of our incompatibility analysis of the observed behavior aggregated to hosts.
+This will visit <tt>https://realtor.com</tt> and generate a simplified inclusion tree of the main frame. It will print those chains which exhibit more than two parties according the the eTLD+1. Additionally supplying the <tt>--showCspResults</tt> as a command line parameter will provide the results of our incompatibility analysis of the observed behavior aggregated to hosts.
 <br><br>
 For an example of the aforementioned URL, see results below. It indicates that <tt>securepubads.g.doubleclick.net</tt> is parser-inserting scripts, making <tt>strict-dynamic</tt> infeasbile. It also indicates that the site itself writes inline scripts, and that <tt>securepubads.g.doubleclick.net</tt>, <tt>ajax.googleapis.com</tt>, and
     <tt>assets.adobedtm.com</tt> add elements to the DOM which contain inline event handlers; all of these require <tt>unsafe-inline</tt>. Finally, we see that the host itself as well as <tt>c.amazon-adsystem.com</tt>, requiring a potential CSP to contain <tt>unsafe-eval</tt> as well.
